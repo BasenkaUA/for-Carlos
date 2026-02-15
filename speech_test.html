@@ -101,8 +101,8 @@
   function buildRecognition() {
     const r = new SpeechRec();
     r.lang = "en-US";            // поменяй на "ru-RU", если хочешь русский
-    r.interimResults = true;
-    r.continuous = true;         // можно false, если хочешь один короткий захват
+    r.interimResults = false;
+    r.continuous = false;         // можно false, если хочешь один короткий захват
     r.maxAlternatives = 3;
 
     r.onstart = () => log("onstart: recognition started");
@@ -201,4 +201,5 @@
 })();
 </script>
 </body>
+
 </html>
